@@ -10,11 +10,14 @@ import utils
 
 
 # Valores constantes para o trabalho
-SIZE = 101
-STEPS = 50
+SIZE = 155
+STEPS = 60
 
 
-state = utils.apply_rule(rl.rule19, SIZE, STEPS, need_more=True)
+# state = utils.apply_rule(rl.rule2, SIZE, STEPS, begin=0)
+
+
+state = utils.compose_rules(rl.rule20, rl.rule31, SIZE, STEPS)
 
 image = utils.get_image(state, SIZE, STEPS)
 

@@ -5,70 +5,75 @@
 #   File: utils.py                                                       #
 # ######################################################################## #
 import numpy as np
-import matplotlib.pyplot as plt
-import cv2
-from PIL import Image, ImageDraw
+from random import randint
+from PIL import Image
 
 
-def compose_rules(rule1, rule2, size, steps):
+def compose_rules(rule1, rule2, size, steps, begin=0):
     """
-        This function composes two 1D cellular automata rules by applying rule1 followed by rule2 for the specified
-        number of steps
+    This function composes two 1D cellular automata rules by applying rule1 followed by rule2 for the specified number
+    of steps
 
-        @args:
-        rule1   (function)  : The first rule to apply
-        rule2   (function)  : The second rule to apply
-        size    (int)       : The size of the cellular automaton
-        steps   (int)       : The number of steps to apply the rules
-
-        @return:
-        numpy.ndarray       : The final state of the cellular automaton
-
+    :param rule1: The first rule to apply
+    :param rule2: The second rule to apply
+    :param size: The size of the cellular automaton
+    :param steps: The number of steps to apply the rules
+    :param begin: default: 0 - 0 for random, 1 for one cell
+    :return: numpy.ndarray - The final state of the cellular automaton
     """
+
     # Initialize the state of the cellular automaton
     state = np.zeros((steps, size), dtype=int)
-    state[0, size//2] = 1  # Set the center cell to 1
+
+    if begin == 0:
+        # Define random values to the first line
+        for i in range(0, size):
+            state[0][i] = randint(0, 1)
+
+    elif begin == 1:
+        state[0, size//2] = 1  # Set the center cell to 1
 
     # Apply rule 1 followed by rule2 for the specified number of steps
-    for i in range(0, steps):
+    for i in range(0, steps-1):
         for j in range(size):
 
-            left = state[i, (j-1) % size]
+            left = state[i, (j - 1) % size]
             center = state[i, j]
-            right = state[i, (j+1) % size]
+            right = state[i, (j + 1) % size]
 
             block = [left, center, right]
 
-            # Apply rule1
-            state[i, j] = rule1(block)
-
-            # Apply rule2
-            state[i, j] = rule2(block)
+            if i % 2 == 0:
+                # Apply rule1
+                state[i + 1, j] = rule1(block)
+            else:
+                # Apply rule2
+                state[i + 1, j] = rule2(block)
 
     return state
 
 
-def apply_rule(rule, size: int, steps: int, need_more=False):
+def apply_rule(rule, size: int, steps: int, begin=0):
     """
-        This function apply a 1D cellular automata rule for the specified number of steps
+    This function apply a 1D cellular automata rule for the specified number of steps
 
-        Parameters
-        ----------
-            rule : function, The rule to apply
-            size : int, the size of the cellular automaton
-            steps : int, the number of steps to apply the rules
-
-        Returns
-        -------
-            numpy.ndarray : the final state of the cellular automaton
-
+    :param rule: function, The rule to apply
+    :param size: int, the size of the cellular automaton
+    :param steps: int, the number of steps to apply the rules
+    :param begin: default: 0 - 0 for random, 1 for one cell
+    :return: numpy.ndarray, the final state of the cellular automaton
     """
+
     # Initialize the state of the cellular automaton
     state = np.zeros((steps, size), dtype=int)
-    state[0, size//2+1] = 1  # Set the center cell to 1
 
-    if need_more:
-        state[0, size // 2 + 2] = 1  # Set the right cell to 1
+    if begin == 0:
+        # Define random values to the first line
+        for i in range(0, size):
+            state[0][i] = randint(0, 1)
+
+    elif begin == 1:
+        state[0, size // 2] = 1  # Set the center cell to 1
 
     # Apply rule for the specified number of steps
     for i in range(0, steps-1):
@@ -82,14 +87,19 @@ def apply_rule(rule, size: int, steps: int, need_more=False):
 
             # Apply rule
             state[i+1, j] = rule(block)
-    #
-    # for i in range(steps):
-    #     print(''.join('X' if x == 1 else '.' for x in state[i]))
+
     return state
 
 
-def get_image(arr_orig, size, steps):
-    arr = arr_orig.copy()
+def get_image(state, size, steps):
+    """
+    Convert the state (array) to image
+    :param state: final state of the cellular automaton
+    :param size: int, the size of the cellular automaton
+    :param steps: int, the number of steps to apply the rules
+    :return: PIL.Image, image of the cellular automaton
+    """
+    arr = state.copy()
 
     for i in range(steps):
         for j in range(size):
