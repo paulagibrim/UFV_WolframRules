@@ -10,14 +10,14 @@ import utils
 
 
 # Valores contantes da aplicação (pode mudar conforme a visualização desejada)
-SIZE = 155
-STEPS = 60
+SIZE = 150
+STEPS = 75
 
 # Para apenas aplicar uma regra, utilize a função:
-# state = utils.apply_rule(rl.rule2, SIZE, STEPS, begin=0)
+state = utils.apply_rule(rl.rule62, SIZE, STEPS, begin=1)
 
 # Para combinar duas regras, utilize a função:
-state = utils.compose_rules(rl.rule20, rl.rule31, SIZE, STEPS)
+# state = utils.compose_rules(rl.rule30, rl.rule41, SIZE, STEPS, begin=0)
 
 # Para transformar o seu estado atual em imagem, utilize a função:
 image = utils.get_image(state, SIZE, STEPS)

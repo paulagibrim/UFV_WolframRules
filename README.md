@@ -5,21 +5,11 @@ Wolfram.
 
 ## Arquivos
 Se encontra no arquivo `rules.py` a implementação das regras de Wolfram. Já foram implementadas as regras de
-0 a 49, e todas as regras seguem o mesmo padrão:
-```python
-# Rule [NUMBER] ([TYPE]) - < [LINK] >
-def rule[NUMBER](block):
-    """
-        :param block: 3-size block
-        :return: int (0 or 1)
-    """
-    return [ALGEBRAIC OR BOOLEAN FORM]
-```
-onde os seguintes termos representam:
-- [NUMBER] - o número da regra;
-- [TYPE] - classe da regra (chaotic, periodic, null, etc);
-- [LINK] - link do site [Wolfram Atlas](http://atlas.wolfram.com/) correspondente aos detalhes daquela regra;
-- [ALGEBRAIC OR BOOLEAN FORM] - a implementação da regra, em sua forma algébrica ou booleana.
+0 a 49, e todas as regras seguem o mesmo padrão, e contém as seguintes informações:
+- o número da regra;
+- classe da regra (I, II, III ou IV);
+- link do site [Wolfram Atlas](http://atlas.wolfram.com/) correspondente aos detalhes daquela regra;
+- a implementação da regra, em sua forma algébrica ou booleana.
 
 No arquivo `utils.py` estão localizadas as implementações das funções necessárias para o programa. São elas: 
 - `apply_rule()`: aplica uma regra a um autômato celular, e retorna seu estado final

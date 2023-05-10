@@ -73,7 +73,8 @@ def apply_rule(rule, size: int, steps: int, begin=0):
             state[0][i] = randint(0, 1)
 
     elif begin == 1:
-        state[0, size // 2] = 1  # Set the center cell to 1
+        state[0, size // 2] = 1     # Set the center cell to 1
+        #state[0, size//2 + 1] = 1   # Set the right-center cell to 1
 
     # Apply rule for the specified number of steps
     for i in range(0, steps-1):
