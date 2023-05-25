@@ -14,7 +14,7 @@ SIZE = 150
 STEPS = 75
 
 # Para apenas aplicar uma regra, utilize a função:
-state = utils.apply_rule(rl.rule62, SIZE, STEPS, begin=1)
+state = utils.apply_rule(rl.rule107, SIZE, STEPS, begin=1)
 
 # Para combinar duas regras, utilize a função:
 # state = utils.compose_rules(rl.rule30, rl.rule41, SIZE, STEPS, begin=0)

@@ -932,7 +932,7 @@ def rule90(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return math.fmod(block[0] + block[1], 2)
+    return math.fmod(block[0] + block[2], 2)
 
 
 # Rule 91 (II) - < http://atlas.wolfram.com/01/01/91/01_01_1_91.html#01_01_164_91 >
@@ -1025,3 +1025,86 @@ def rule99(block):
         :return: int (0 or 1)
     """
     return math.fmod(1 + block[0] + block[1] + block[0] * block[2], 2)
+
+
+# Rule 100 (II) - < http://atlas.wolfram.com/01/01/100/01_01_1_100.html#01_01_164_100 >
+# EQUIVALENT TO RULE44
+def rule100(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[1] + block[0] * block[2] + block[1] * block[2] + block[0] * block[1] * block[2], 2)
+
+
+# Rule 101 (III) - < http://atlas.wolfram.com/01/01/101/01_01_1_101.html#01_01_164_101 >
+# EQUIVALENT TO RULE45
+def rule101(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[0] * block[1] + block[2], 2)
+
+
+# Rule 102 (III) - < http://atlas.wolfram.com/01/01/102/01_01_1_102.html#01_01_164_102 >
+# EQUIVALENT TO RULE60
+def rule102(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[1] + block[2], 2)
+
+
+# Rule 103 (II) - < http://atlas.wolfram.com/01/01/103/01_01_1_103.html#01_01_164_103 >
+# EQUIVALENT TO RULE25
+def rule103(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[0] * block[1] + block[0] * block[2] + block[1] * block[2] + block[0] *
+                     block[1] * block[2], 2)
+
+
+# Rule 104 (II) - < http://atlas.wolfram.com/01/01/104/01_01_1_104.html#01_01_164_104 >
+# Equivalent rules: 233
+def rule104(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[0] * block[1] + block[0] * block[2] + block[1] * block[2] + block[0] * block[1] *
+                     block[2], 2)
+
+
+# Rule 105 (III) - < http://atlas.wolfram.com/01/01/105/01_01_1_105.html#01_01_164_105 >
+# Equivalent rules: none
+def rule105(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[1] + block[2], 2)
+
+
+# Rule 106 (IV) - < http://atlas.wolfram.com/01/01/106/01_01_1_106.html#01_01_164_106 >
+# Equivalent rules: 120, 169, 225
+def rule106(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[0] * block[1] + block[2], 2)
+
+
+# Rule 107 (IV) - < http://atlas.wolfram.com/01/01/107/01_01_1_107.html#01_01_164_107 >
+# EQUIVALENT TO RULE41
+def rule107(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[1] + block[0] * block[2] + block[1] * block[2] + block[0] * block[1] *
+                     block[2], 2)

@@ -33,6 +33,10 @@ def compose_rules(rule1, rule2, size, steps, begin=0):
     elif begin == 1:
         state[0, size//2] = 1  # Set the center cell to 1
 
+    elif begin == 2:
+        state[0, size//2] = 1  # Set the center cell to 1
+        state[0, size//2 + 1] = 1  # Set the center-right cell to 1
+
     # Apply rule 1 followed by rule2 for the specified number of steps
     for i in range(0, steps-1):
         for j in range(size):
@@ -74,7 +78,15 @@ def apply_rule(rule, size: int, steps: int, begin=0):
 
     elif begin == 1:
         state[0, size // 2] = 1     # Set the center cell to 1
-        #state[0, size//2 + 1] = 1   # Set the right-center cell to 1
+
+    elif begin == 2:
+        state[0, size // 2] = 1  # Set the center cell to 1
+        state[0, size // 2 + 1] = 1  # Set the center-right cell to 1
+
+    elif begin == 3:
+        state[0, size // 2] = 1  # Set the center cell to 1
+        state[0, size // 2 + 1] = 1  # Set the center-right cell to 1
+        state[0, size // 2 - 1] = 1  # Set the center-left cell to 1
 
     # Apply rule for the specified number of steps
     for i in range(0, steps-1):
