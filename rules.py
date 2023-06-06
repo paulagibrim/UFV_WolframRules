@@ -44,7 +44,7 @@ def rule2(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0]) and not(block[1]) and block[2]
+    return not (block[0]) and not (block[1]) and block[2]
 
 
 # Rule 3 (II) - < http://atlas.wolfram.com/01/01/3/01_01_1_3.html#01_01_164_3 >
@@ -54,7 +54,7 @@ def rule3(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] or block[1])
+    return not (block[0] or block[1])
 
 
 # Rule 4 (II) - < http://atlas.wolfram.com/01/01/4/01_01_1_4.html#01_01_164_4 >
@@ -64,7 +64,7 @@ def rule4(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] or block[2]) and block[1]
+    return not (block[0] or block[2]) and block[1]
 
 
 # Rule 5 (II) - < http://atlas.wolfram.com/01/01/5/01_01_1_5.html#01_01_164_5 >
@@ -74,7 +74,7 @@ def rule5(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] or block[2])
+    return not (block[0] or block[2])
 
 
 # Rule 6 (II) - < http://atlas.wolfram.com/01/01/6/01_01_1_6.html#01_01_164_6 >
@@ -95,7 +95,7 @@ def rule7(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] or block[1] and block[2])
+    return not (block[0] or block[1] and block[2])
 
 
 # Rule 8 (I) - < http://atlas.wolfram.com/01/01/8/01_01_1_8.html#01_01_164_8 >
@@ -106,7 +106,7 @@ def rule8(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0]) and block[1] and block[2]
+    return not (block[0]) and block[1] and block[2]
 
 
 # Rule 9 (II) - < http://atlas.wolfram.com/01/01/9/01_01_1_9.html#01_01_164_9 >
@@ -126,7 +126,7 @@ def rule10(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0]) and block[2]
+    return not (block[0]) and block[2]
 
 
 # Rule 11 (II) - < http://atlas.wolfram.com/01/01/11/01_01_1_11.html#01_01_164_11 >
@@ -156,7 +156,7 @@ def rule13(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return math.fmod((1+block[0])*(1+block[2]+block[1]*block[2]), 2)
+    return math.fmod((1 + block[0]) * (1 + block[2] + block[1] * block[2]), 2)
 
 
 # Rule 14 (II) - < http://atlas.wolfram.com/01/01/14/01_01_1_14.html#01_01_164_14 >
@@ -176,7 +176,7 @@ def rule15(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0])
+    return not (block[0])
 
 
 # Rule 16 (II) - < http://atlas.wolfram.com/01/01/15/01_01_1_15.html#01_01_164_15 >
@@ -186,7 +186,7 @@ def rule16(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return block[0] and not(block[1]) and not(block[2])
+    return block[0] and not (block[1]) and not (block[2])
 
 
 # Rule 17 (II) - < http://atlas.wolfram.com/01/01/17/01_01_1_17.html#01_01_164_17 >
@@ -196,7 +196,7 @@ def rule17(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[1] or block[2])
+    return not (block[1] or block[2])
 
 
 # Rule 18 (III) - < http://atlas.wolfram.com/01/01/18/01_01_1_18.html#01_01_164_18 >
@@ -206,7 +206,7 @@ def rule18(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return math.fmod((1+block[1])*(block[0]+block[2]), 2)
+    return math.fmod((1 + block[1]) * (block[0] + block[2]), 2)
 
 
 # Rule 19 (II) - < http://atlas.wolfram.com/01/01/19/01_01_1_19.html#01_01_164_19 >
@@ -217,7 +217,7 @@ def rule19(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] and block[2] or block[1])
+    return not (block[0] and block[2] or block[1])
 
 
 # Rule 20 (II) - < http://atlas.wolfram.com/01/01/20/01_01_1_20.html#01_01_164_20 >
@@ -239,7 +239,7 @@ def rule21(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] and block[1] or block[2])
+    return not (block[0] and block[1] or block[2])
 
 
 # Rule 22 (III) - < http://atlas.wolfram.com/01/01/22/01_01_1_22.html#01_01_164_22 >
@@ -340,7 +340,7 @@ def rule31(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] and (block[1] or block[2]))
+    return not (block[0] and (block[1] or block[2]))
 
 
 # Rule 32 (I) - < http://atlas.wolfram.com/01/01/32/01_01_1_32.html#01_01_164_32 >
@@ -350,7 +350,7 @@ def rule32(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return block[0] and not(block[1]) and block[2]
+    return block[0] and not (block[1]) and block[2]
 
 
 # Rule 33 (II) - < http://atlas.wolfram.com/01/01/33/01_01_1_33.html#01_01_164_33 >
@@ -370,7 +370,7 @@ def rule34(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[1]) and block[2]
+    return not (block[1]) and block[2]
 
 
 # Rule 35 (II) - < http://atlas.wolfram.com/01/01/35/01_01_1_35.html#01_01_164_35 >
@@ -500,7 +500,7 @@ def rule47(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0]) or not(block[1]) and block[2]
+    return not (block[0]) or not (block[1]) and block[2]
 
 
 # Rule 48 (II) - < http://atlas.wolfram.com/01/01/48/01_01_1_48.html#01_01_164_48 >
@@ -510,7 +510,7 @@ def rule48(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return block[0] and not(block[1])
+    return block[0] and not (block[1])
 
 
 # Rule 49 (II) - < http://atlas.wolfram.com/01/01/49/01_01_1_49.html#01_01_164_49 >
@@ -540,7 +540,7 @@ def rule51(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[1])
+    return not (block[1])
 
 
 # Rule 52 (II) - < http://atlas.wolfram.com/01/01/52/01_01_1_52.html#01_01_164_52 >
@@ -580,7 +580,7 @@ def rule55(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not((block[0] or block[2]) and block[1])
+    return not ((block[0] or block[2]) and block[1])
 
 
 # Rule 56 (II) - < http://atlas.wolfram.com/01/01/56/01_01_1_56.html#01_01_164_56 >
@@ -662,7 +662,7 @@ def rule63(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] and block[1])
+    return not (block[0] and block[1])
 
 
 # Rule 64 (I) - < http://atlas.wolfram.com/01/01/64/01_01_1_64.html#01_01_164_64 >
@@ -672,7 +672,7 @@ def rule64(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return block[0] and block[1] and not(block[2])
+    return block[0] and block[1] and not (block[2])
 
 
 # Rule 65 (II) - < http://atlas.wolfram.com/01/01/65/01_01_1_65.html#01_01_164_65 >
@@ -712,7 +712,7 @@ def rule68(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return block[1] and not(block[2])
+    return block[1] and not (block[2])
 
 
 # Rule 69 (II) - < http://atlas.wolfram.com/01/01/69/01_01_1_69.html#01_01_164_69 >
@@ -822,7 +822,7 @@ def rule79(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0]) or block[1] and not(block[2])
+    return not (block[0]) or block[1] and not (block[2])
 
 
 # Rule 80 (II) - < http://atlas.wolfram.com/01/01/80/01_01_1_80.html#01_01_164_80 >
@@ -832,7 +832,7 @@ def rule80(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return block[0] and not(block[2])
+    return block[0] and not (block[2])
 
 
 # Rule 81 (II) - < http://atlas.wolfram.com/01/01/81/01_01_1_81.html#01_01_164_81 >
@@ -882,7 +882,7 @@ def rule85(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[2])
+    return not (block[2])
 
 
 # Rule 86 (III) - < http://atlas.wolfram.com/01/01/86/01_01_1_86.html#01_01_164_86 >
@@ -902,7 +902,7 @@ def rule87(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not((block[0] or block[1]) and block[2])
+    return not ((block[0] or block[1]) and block[2])
 
 
 # Rule 88 (II) - < http://atlas.wolfram.com/01/01/88/01_01_1_88.html#01_01_164_88 >
@@ -963,7 +963,7 @@ def rule93(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not((block[0] or not(block[1])) and block[2])
+    return not ((block[0] or not (block[1])) and block[2])
 
 
 # Rule 94 (II) - < http://atlas.wolfram.com/01/01/94/01_01_1_94.html#01_01_164_94 >
@@ -984,7 +984,7 @@ def rule95(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[0] and block[2])
+    return not (block[0] and block[2])
 
 
 # Rule 96 (I) - < http://atlas.wolfram.com/01/01/96/01_01_1_96.html#01_01_164_96 >
@@ -1229,7 +1229,7 @@ def rule119(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return not(block[1] and block[2])
+    return math.fmod(1 + block[1] * block[2], 2)
 
 
 # Rule 120 (IV) - < http://atlas.wolfram.com/01/01/120/01_01_1_120.html#01_01_164_120 >
@@ -1403,7 +1403,7 @@ def rule136(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return block[2] and block[3]
+    return block[1] * block[2]
 
 
 # Rule 137 (IV) - < http://atlas.wolfram.com/01/01/137/01_01_1_137.html#01_01_164_137 >
@@ -1444,7 +1444,7 @@ def rule140(block):
         :param block: 3-size block
         :return: int (0 or 1)
     """
-    return math.fmod(1 + block[0] + block[1] * block[2], 2)
+    return math.fmod(block[1] * (1 + block[0] + block[1] * block[2]), 2)
 
 
 # Rule 141 (II) - < http://atlas.wolfram.com/01/01/141/01_01_1_141.html#01_01_164_141 >
@@ -1558,3 +1558,226 @@ def rule151(block):
     """
     return math.fmod(1 + block[0] * block[1] + block[0] * block[2] + block[1] * block[2] + block[0] * block[1] *
                      block[2], 2)
+
+
+# Rule 152 (II) - < http://atlas.wolfram.com/01/01/152/01_01_1_152.html#01_01_164_152 >
+# Equivalent rules: 188, 194, 230
+def rule152(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[0] + block[0] * block[1] + block[0] * block[2] + block[1] * block[2] + block[0] * block[1] *
+                     block[2], 2)
+
+
+# Rule 153 (III) - < http://atlas.wolfram.com/01/01/153/01_01_1_153.html#01_01_164_153 >
+# EQUIVALENT TO RULE60
+def rule153(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[1] + block[2], 2)
+
+
+# Rule 154 (II) - < http://atlas.wolfram.com/01/01/154/01_01_1_154.html#01_01_164_154 >
+# Equivalent rules: 166, 180, 210
+def rule154(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[0] + block[0] * block[1] + block[2], 2)
+
+
+# Rule 155 (II) - < http://atlas.wolfram.com/01/01/155/01_01_1_155.html#01_01_164_155 >
+# EQUIVALENT TO RULE38
+def rule155(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[1] + block[0] * block[2] + block[1] * block[2] + block[0] * block[1] * block[2], 2)
+
+
+# Rule 156 (II) - < http://atlas.wolfram.com/01/01/156/01_01_1_156.html#01_01_164_156 >
+# Equivalent rules: 198
+def rule156(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[0] + block[1] + block[0] * block[2], 2)
+
+
+# Rule 157 (II) - < http://atlas.wolfram.com/01/01/157/01_01_1_157.html#01_01_164_157 >
+# EQUIVALENT TO RULE28
+def rule157(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[1] * block[0] + block[2] + block[1] * block[2] + block[0] * block[1] * block[2], 2)
+
+
+# Rule 158 (II) - < http://atlas.wolfram.com/01/01/158/01_01_1_158.html#01_01_164_158 >
+# EQUIVALENT TO RULE134
+def rule158(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[0] + block[1] + block[2] + block[1] * block[2] + block[0] * block[1] * block[2], 2)
+
+
+# Rule 159 (II) - < http://atlas.wolfram.com/01/01/159/01_01_1_159.html#01_01_164_159 >
+# EQUIVALENT TO RULE6
+def rule159(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] * block[1] + block[0] * block[2], 2)
+
+
+# Rule 160 (I) - < http://atlas.wolfram.com/01/01/160/01_01_1_160.html#01_01_164_160 >
+# Equivalent rules: 250
+def rule160(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return block[0] * block[2]
+
+
+# Rule 161 (III) - < http://atlas.wolfram.com/01/01/161/01_01_1_161.html#01_01_164_161 >
+# EQUIVALENT TO RULE122
+def rule161(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[1] + block[0] * block[1] + block[2] + block[1] * block[2] + block[0] *
+                     block[1] * block[2], 2)
+
+
+# Rule 162 (II) - < http://atlas.wolfram.com/01/01/162/01_01_1_162.html#01_01_164_162 >
+# Equivalent rules: 176, 186, 242
+def rule162(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod((1 + block[1] + block[0] * block[1]) * block[2], 2)
+
+
+# Rule 163 (II) - < http://atlas.wolfram.com/01/01/163/01_01_1_163.html#01_01_164_163 >
+# EQUIVALENT TO RULE58
+def rule163(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[1] + block[0] * block[1] + block[0] * block[2], 2)
+
+
+# Rule 164 (II) - < http://atlas.wolfram.com/01/01/164/01_01_1_164.html#01_01_164_164 >
+# Equivalent rules: 218
+def rule164(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[1] + block[0] * block[1] + block[0] * block[2] + block[1] * block[2] + block[0] * block[1] *
+                     block[2], 2)
+
+
+# Rule 165 (III) - < http://atlas.wolfram.com/01/01/165/01_01_1_165.html#01_01_165_165 >
+# EQUIVALENT TO RULE90
+def rule165(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[2], 2)
+
+
+# Rule 166 (II) - < http://atlas.wolfram.com/01/01/166/01_01_1_166.html#01_01_166_166 >
+# EQUIVALENT TO RULE154
+def rule166(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[1] + block[0] * block[1] + block[2], 2)
+
+
+# Rule 167 (II) - < http://atlas.wolfram.com/01/01/167/01_01_1_167.html#01_01_167_167 >
+# EQUIVALENT TO RULE26
+def rule167(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[0] * block[2] + block[1] * block[2] + block[0] * block[1] * block[2], 2)
+
+
+# Rule 168 (I) - < http://atlas.wolfram.com/01/01/168/01_01_1_168.html#01_01_168_168 >
+# Equivalent rules: 224, 234, 248
+def rule168(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[2] * (block[0] + block[1] + block[0] * block[1]), 2)
+
+
+# Rule 169 (IV) - < http://atlas.wolfram.com/01/01/169/01_01_1_169.html#01_01_169_169 >
+# EQUIVALENT TO RULE106
+def rule169(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[1] + block[0] * block[1] + block[2], 2)
+
+
+# Rule 170 (II) - < http://atlas.wolfram.com/01/01/170/01_01_1_170.html#01_01_170_170 >
+# EQUIVALENT TO RULE240
+def rule170(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return block[2]
+
+
+# Rule 171 (II) - < http://atlas.wolfram.com/01/01/171/01_01_1_171.html#01_01_171_171 >
+# EQUIVALENT TO RULE42
+def rule171(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return not(block[0] or block[1]) or block[2]
+
+
+# Rule 172 (II) - < http://atlas.wolfram.com/01/01/172/01_01_1_172.html#01_01_172_172 >
+# Equivalent rules: 202, 216, 228
+def rule172(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(block[1] + block[0] * block[1] + block[0] * block[2], 2)
+
+
+# Rule 173 (II) - < http://atlas.wolfram.com/01/01/173/01_01_1_173.html#01_01_173_173 >
+# EQUIVALENT TO RULE74
+def rule173(block):
+    """
+        :param block: 3-size block
+        :return: int (0 or 1)
+    """
+    return math.fmod(1 + block[0] + block[1] + block[0] * block[1] + block[2], 2)

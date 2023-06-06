@@ -23,7 +23,7 @@ def compose_rules(rule1, rule2, size, steps, begin=0):
     """
 
     # Initialize the state of the cellular automaton
-    state = np.zeros((steps, size), dtype=int)
+    state = np.zeros((steps, size), dtype=np.uint8)
 
     if begin == 0:
         # Define random values to the first line
@@ -69,7 +69,7 @@ def apply_rule(rule, size: int, steps: int, begin=0):
     """
 
     # Initialize the state of the cellular automaton
-    state = np.zeros((steps, size), dtype=int)
+    state = np.zeros((steps, size), dtype=np.uint8)
 
     if begin == 0:
         # Define random values to the first line
@@ -87,6 +87,13 @@ def apply_rule(rule, size: int, steps: int, begin=0):
         state[0, size // 2] = 1  # Set the center cell to 1
         state[0, size // 2 + 1] = 1  # Set the center-right cell to 1
         state[0, size // 2 - 1] = 1  # Set the center-left cell to 1
+
+    elif begin == 101:
+        state[0, size // 2] = 1  # Set the center cell to 1
+        state[0, size // 2 + 2] = 1  # Set the 2center-right cell to 1
+        state[0, size // 2 - 2] = 1  # Set the 2center-left cell to 1
+        state[0, size // 2 + 4] = 1  # Set the 4center-right cell to 1
+        state[0, size // 2 - 4] = 1  # Set the 4center-left cell to 1
 
     # Apply rule for the specified number of steps
     for i in range(0, steps-1):
